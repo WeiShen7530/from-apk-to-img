@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <form
+      action="{{ url_for('upload_apk') }}"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <label for="apk-file-to-image">Choose apk file you want to convert</label>
+      <br /><br />
+      <input type="file" id="apk-file-to-image" name="file" />
+      <button type="submit" value="Submit">Submit</button>
+    </form>
+  </body>
+</html>
