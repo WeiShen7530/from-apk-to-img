@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
+    <title>FROM-APK-TO-IMAGE</title>
   </head>
   <body>
     <form
@@ -10,9 +10,12 @@
       method="POST"
       enctype="multipart/form-data"
     >
-      <label for="apk-file-to-image">Choose apk file you want to convert</label>
+      <h2 style="text-align: center">
+        THIS TOOL IS USED TO CONVERT APK FILES TO GRAYSCALE IMAGES
+      </h2>
+      <label for="apk-file-to-image">Choose your apk file</label>
       <br /><br />
-      <input type="file" id="apk-file-to-image" name="file" />
+      <input type="file" id="apk-file-to-image" name="file" multiple />
       <button type="submit" value="Submit">Submit</button>
     </form>
   </body>
