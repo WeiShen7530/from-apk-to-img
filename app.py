@@ -1,4 +1,5 @@
 import os, zipfile, math, codecs, shutil, hashlib
+import time
 
 from flask import Flask, render_template, request
 from shutil import copyfile
@@ -33,6 +34,8 @@ def upload_apk():
     # going to store file previously uploaded into ZIP folder
     # going to store file previously uploaded into APK_STORAGE folder
 
+    start_time = time.time()
+    
     for file in request.files.getlist('file'):
         # changing the extension of the file previously from APK to ZIP
 
@@ -179,6 +182,7 @@ def upload_apk():
         os.remove(filePath)
         print('apk-to-convert.zip has been removed \n')
 
+    print("--- %s seconds ---" % (time.time() - start_time))
     return render_template('index.html')
 
 # Run app
