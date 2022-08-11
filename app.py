@@ -163,13 +163,13 @@ def upload_apk():
 
         degrees = -90
         new_img = img.rotate(degrees, expand=True)
-        new_img = new_img.resize((300, 300))
-        new_img.save(newImgFileHashName + "-300-300.jpg", "JPEG", optimize=True)
+        new_img = new_img.resize((256, 256))
+        new_img.save(newImgFileHashName + "-256-256.jpg", "JPEG", optimize=True)
 
         # grayscale image conversion
         
-        grayScaleImg = Image.open(newImgFileHashName + "-300-300.jpg").convert("LA")
-        grayScaleImg.save(newImgFileHashName + "-300-300-grayscale.png", "PNG")
+        grayScaleImg = Image.open(newImgFileHashName + "-256-256.jpg").convert("LA")
+        grayScaleImg.save(newImgFileHashName + "-256-256-grayscale.png", "PNG")
 
         # elimination of elements that are no longer useful
 
